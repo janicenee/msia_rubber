@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马来西亚橡胶出口数据分析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#006400',
+                        secondary: '#00b359',
+                        accent: '#66ff99',
+                        light: '#f0f8ff',
+                        dark: '#333333',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 14px 30px rgba(0, 179, 89, 0.25);
+            }
+            .gradient-green {
+                background: linear-gradient(45deg, #006400, #00b359, #66ff99);
+            }
+            .bg-light-green {
+                background: #e6ffe6;
+            }
+            .border-left-green {
+                border-left: 6px solid #00b359;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gradient-to-r from-light to-e0ffe0 text-dark">
+    <!-- 导航栏 -->
+    <header>
+  <h1>🛞马来西亚橡胶小百科🧤</h1>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="橡胶_历史1.html">关于橡胶</a>
+    <a href="橡胶_data.html">数据图表</a>
+    <a href="橡胶_小知识.html">橡胶小知识</a>
+    <a href="橡胶_推荐1.html">产品推荐</a>
+  </nav>
+</header>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 概览部分 -->
+        <section id="overview" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl p-8 border-l-8 border-primary">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6">马来西亚橡胶出口概览</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    马来西亚是全球重要的天然橡胶生产和出口国之一。橡胶产业在马来西亚经济中占有重要地位，为国家创造了大量就业机会和外汇收入。本页面通过可视化的方式展示了马来西亚橡胶在2021-2024年间的出口情况，包括主要目的地、出口量变化趋势以及市场分布。
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-light-green rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-center mb-4">
+                            <i class="fa fa-globe text-3xl text-primary mr-4"></i>
+                            <h3 class="text-xl font-semibold text-primary">主要出口目的地</h3>
+                        </div>
+                        <p class="text-dark">中国、美国、阿联酋、巴西和印度是马来西亚橡胶的主要出口市场。</p>
+                    </div>
+                    
+                    <div class="bg-light-green rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-center mb-4">
+                            <i class="fa fa-cubes text-3xl text-primary mr-4"></i>
+                            <h3 class="text-xl font-semibold text-primary">主要出口品类</h3>
+                        </div>
+                        <p class="text-dark">SMR 20和SMR 10是马来西亚最主要的出口橡胶品类，占总出口量的绝大部分。</p>
+                    </div>
+                    
+                    <div class="bg-light-green rounded-xl p-6 shadow-md card-hover">
+                        <div class="flex items-center mb-4">
+                            <i class="fa fa-bar-chart text-3xl text-primary mr-4"></i>
+                            <h3 class="text-xl font-semibold text-primary">市场份额</h3>
+                        </div>
+                        <p class="text-dark">中国占据马来西亚橡胶出口的最大份额，约占总出口量的60%以上。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据部分 -->
+        <section id="data" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 border-left-green pl-3">出口详细数据</h2>
+                <p class="text-lg mb-8">以下是马来西亚橡胶2021-2024年出口至各主要目的地的数据（单位：吨）。</p>
+                
+                <!-- 数据表格 -->
+                <div class="overflow-x-auto">
+                    <table class="w-full min-w-[800px] border-collapse">
+                        <thead>
+                            <tr class="bg-light-green text-primary">
+                                <th class="py-3 px-4 text-left font-semibold">目的地</th>
+                                <th class="py-3 px-4 text-center font-semibold">2021年</th>
+                                <th class="py-3 px-4 text-center font-semibold">2022年</th>
+                                <th class="py-3 px-4 text-center font-semibold">2023年</th>
+                                <th class="py-3 px-4 text-center font-semibold">2024年</th>
+                                <th class="py-3 px-4 text-center font-semibold">趋势</th>
+                            </tr>
+                        </thead>
+                        <tbody id="export-data">
+                            <!-- 数据将通过JavaScript动态填充 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品类分析部分 -->
+        <section id="categories" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 border-left-green pl-3">马来西亚标准橡胶出口分类统计</h2>
+                <p class="text-lg mb-8">以下是马来西亚标准橡胶(SMR)各品类在不同年份的出口量占比情况。</p>
+                
+                <!-- 品类数据 -->
+                <div class="bg-light-green/50 rounded-xl p-6 shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold text-primary">标准橡胶出口品类统计</h3>
+                        <div class="relative">
+                            <select id="tableYearSelector" class="bg-white border border-gray-300 rounded-lg px-3 py-1.5 pr-8 appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="3">2024年</option>
+                                <option value="2">2023年</option>
+                                <option value="1">2022年</option>
+                                <option value="0">2021年</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <i class="fa fa-chevron-down text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-primary text-white">
+                                    <th class="py-3 px-4 text-left font-semibold">品类</th>
+                                    <th class="py-3 px-4 text-center font-semibold">出口量(吨)</th>
+                                    <th class="py-3 px-4 text-center font-semibold">占比</th>
+                                </tr>
+                            </thead>
+                            <tbody id="category-data">
+                                <!-- 数据将通过JavaScript动态填充 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关键洞察部分 -->
+        <section id="insights" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-6 border-left-green pl-3">关键洞察与分析</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-light-green rounded-xl p-6 shadow-md">
+                        <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                            <i class="fa fa-lightbulb-o text-2xl mr-2"></i> 主要发现
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>SMR 20是马来西亚最主要的出口橡胶品类，占总出口量的大部分。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>SMR 10也是重要的出口品类，占总出口量的约25%。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>SMR CV品类在2022年出现大幅增长，随后在2023年和2024年有所回落。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>其他品类（包括特殊规格和混合橡胶）的出口量相对较小，但总体呈增长趋势。</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-green rounded-xl p-6 shadow-md">
+                        <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                            <i class="fa fa-line-chart text-2xl mr-2"></i> 未来趋势预测
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-up text-secondary mt-1 mr-2"></i>
+                                <span>随着全球轮胎行业的发展，SMR 20和SMR 10的需求预计将保持稳定增长。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-up text-secondary mt-1 mr-2"></i>
+                                <span>高性能橡胶品类（如SMR CV）的出口有望随着技术进步和高端应用需求的增加而增长。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-triangle text-orange-500 mt-1 mr-2"></i>
+                                <span>全球经济波动和原材料价格变化可能影响橡胶出口的整体增长速度。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-triangle text-orange-500 mt-1 mr-2"></i>
+                                <span>可持续和环保型橡胶产品的市场需求正在上升，马来西亚需加大相关品类的研发和生产。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 推荐策略 -->
+                <div class="mt-8 bg-primary/5 border border-primary/20 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-primary mb-4">战略建议</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg p-5 shadow-sm">
+                            <div class="text-secondary text-3xl mb-3">
+                                <i class="fa fa-flask"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">产品创新</h4>
+                            <p class="text-dark/80">加大对高性能和特种橡胶品类的研发投入，满足高端市场需求。</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-5 shadow-sm">
+                            <div class="text-secondary text-3xl mb-3">
+                                <i class="fa fa-certificate"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">质量提升</h4>
+                            <p class="text-dark/80">加强质量控制，提升马来西亚标准橡胶的国际市场声誉。</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-5 shadow-sm">
+                            <div class="text-secondary text-3xl mb-3">
+                                <i class="fa fa-leaf"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">可持续发展</h4>
+                            <p class="text-dark/80">推广可持续橡胶种植和生产实践，符合国际环保标准。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align:center; padding: 1em; background:#222; color:#ccc; margin-top: 40px;">
+  &copy; 马来西亚橡胶科普 ｜ ©️janice 2025年6月制作
+</footer>
+
+    <script>
+        // 橡胶出口数据
+        const exportData = [
+            { country: "南非 🇿🇦", code: "ZA", data: [4506, 3089, 1829, 2246] },
+            { country: "美国 🇺🇸", code: "US", data: [39186, 34182, 15708, 34039] },
+            { country: "阿根廷 🇦🇷", code: "AR", data: [5796, 4530, 4949, 3807] },
+            { country: "荷兰 🇳🇱", code: "NL", data: [1079, 825, 1555, 517] },
+            { country: "比利时 🇧🇪", code: "BE", data: [7481, 131, 213, 316] },
+            { country: "巴西 🇧🇷", code: "BR", data: [12036, 15659, 10681, 13403] },
+            { country: "中国 🇨🇳", code: "CN", data: [315556, 285716, 279038, 230869] },
+            { country: "阿拉伯联合酋长国 🇦🇪", code: "AE", data: [36860, 51665, 57439, 57767] },
+            { country: "芬兰 🇫🇮", code: "FI", data: [25885, 18186, 6391, 1552] },
+            { country: "希腊 🇬🇷", code: "GR", data: [273, 148, 100, 134] },
+            { country: "印度 🇮🇳", code: "IN", data: [22733, 24566, 29171, 39883] },
+            { country: "伊朗 🇮🇷", code: "IR", data: [15076, 17745, 14796, 4616] },
+            { country: "意大利 🇮🇹", code: "IT", data: [5216, 4626, 0, 3053] },
+            { country: "日本 🇯🇵", code: "JP", data: [5216, 5710, 5134, 2488] },
+            { country: "德国 🇩🇪", code: "DE", data: [5081, 26314, 69, 60780] },
+            { country: "加拿大 🇨🇦", code: "CA", data: [28596, 2239, 54768, 2002] },
+            { country: "韩国 🇰🇷", code: "KR", data: [3561, 10900, 1387, 10658] },
+            { country: "埃及 🇪🇬", code: "EG", data: [8715, 2867, 9375, 10170] },
+            { country: "墨西哥 🇲🇽", code: "MX", data: [1771, 8623, 1730, 5563] },
+            { country: "巴基斯坦 🇵🇰", code: "PK", data: [10998, 3062, 17129, 18042] },
+            { country: "法国 🇫🇷", code: "FR", data: [9650, 948, 3077, 4273] },
+            { country: "波兰 🇵🇱", code: "PL", data: [1237, 2834, 913, 484] },
+            { country: "葡萄牙 🇵🇹", code: "PT", data: [3327, 1042, 10357, 14811] },
+            { country: "西班牙 🇪🇸", code: "ES", data: [2304, 37, 1461, 1574] },
+            { country: "新加坡 🇸🇬", code: "SG", data: [52, 185, 76, 75] },
+            { country: "瑞典 🇸🇪", code: "SE", data: [426, 3601, 91, 107] },
+            { country: "土耳其 🇹🇷", code: "TR", data: [16809, 11, 15319, 12001] },
+            { country: "乌克兰 🇺🇦", code: "UA", data: [42, 1267, 0, 0] },
+            { country: "英国 🇬🇧", code: "GB", data: [2118, 294, 583, 667] },
+            { country: "越南 🇻🇳", code: "VN", data: [1822, 294, 98, 2449] }
+        ];
+
+        // 橡胶品类数据
+        const categoryData = [
+            { category: "SMR L", data: [759, 450, 627, 654] },
+            { category: "SMR 5", data: [3003, 3156, 1976, 3234] },
+            { category: "SMR 10", data: [165867, 174476, 141366, 157625] },
+            { category: "SMR 20", data: [418311, 388370, 375501, 353337] },
+            { category: "SMR GP", data: [19534, 22189, 21091, 24657] },
+            { category: "SMR CV", data: [9333, 5391, 18303, 18932] },
+            { category: "其他", data: [7528, 9391, 2160, 1117] }
+        ];
+
+        // 填充表格数据
+        function populateTable(yearIndex = 3) {
+            const tableBody = document.getElementById('export-data');
+            tableBody.innerHTML = '';
+            
+            // 按指定年份数据排序
+            const sortedData = [...exportData].sort((a, b) => b.data[yearIndex] - a.data[yearIndex]);
+            
+            sortedData.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = 'border-b border-gray-200 hover:bg-gray-50 transition-colors';
+                
+                // 计算趋势
+                let trend = '';
+                let trendClass = '';
+                if (yearIndex > 0 && item.data[yearIndex] > item.data[yearIndex - 1]) {
+                    trend = '增长';
+                    trendClass = 'text-green-600';
+                } else if (yearIndex > 0 && item.data[yearIndex] < item.data[yearIndex - 1]) {
+                    trend = '下降';
+                    trendClass = 'text-red-600';
+                } else {
+                    trend = '持平';
+                    trendClass = 'text-gray-500';
+                }
+                
+                row.innerHTML = `
+                    <td class="py-3 px-4">${item.country}</td>
+                    <td class="py-3 px-4 text-center">${item.data[0].toLocaleString()}</td>
+                    <td class="py-3 px-4 text-center">${item.data[1].toLocaleString()}</td>
+                    <td class="py-3 px-4 text-center">${item.data[2].toLocaleString()}</td>
+                    <td class="py-3 px-4 text-center font-semibold">${item.data[3].toLocaleString()}</td>
+                    <td class="py-3 px-4 text-center">
+                        <span class="${trendClass}">${trend}</span>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+
+        // 更新品类表格数据
+        function updateCategoryTable(yearIndex = 3) {
+            const tableBody = document.getElementById('category-data');
+            tableBody.innerHTML = '';
+            
+            // 计算总出口量
+            const totalExport = categoryData.reduce((sum, item) => sum + item.data[yearIndex], 0);
+            
+            categoryData.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = 'border-b border-gray-200 hover:bg-gray-50 transition-colors';
+                
+                // 计算占比
+                const percentage = ((item.data[yearIndex] / totalExport) * 100).toFixed(2);
+                
+                row.innerHTML = `
+                    <td class="py-3 px-4 font-medium">${item.category}</td>
+                    <td class="py-3 px-4 text-center">${item.data[yearIndex].toLocaleString()}</td>
+                    <td class="py-3 px-4 text-center">
+                        <div class="flex items-center justify-center">
+                            <span class="font-semibold mr-2">${percentage}%</span>
+                            <div class="w-20 h-4 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full" style="width: ${percentage}%; background-color: ${getRandomColor(item.category)}"></div>
+                            </div>
+                        </div>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+
+        // 生成随机颜色
+        function getRandomColor(name, alpha = 0.8) {
+            // 为特定品类定义固定颜色
+            const colorMap = {
+                'SMR L': `rgba(75, 192, 192, ${alpha})`,
+                'SMR 5': `rgba(54, 162, 235, ${alpha})`,
+                'SMR 10': `rgba(255, 99, 132, ${alpha})`,
+                'SMR 20': `rgba(54, 162, 235, ${alpha})`,
+                'SMR GP': `rgba(255, 206, 86, ${alpha})`,
+                'SMR CV': `rgba(153, 102, 255, ${alpha})`,
+                '其他': `rgba(255, 159, 64, ${alpha})`
+            };
+            
+            // 如果有预定义颜色，返回它
+            if (colorMap[name]) {
+                return colorMap[name];
+            }
+            
+            // 否则生成随机颜色
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM 加载完成');
+            
+            // 填充表格数据
+            populateTable();
+            updateCategoryTable();
+            
+            // 年份选择器事件监听
+            document.getElementById('tableYearSelector').addEventListener('change', function() {
+                const yearIndex = parseInt(this.value);
+                updateCategoryTable(yearIndex);
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    
+
+

@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>橡胶历史 - 马来西亚橡胶科普网</title>
+<link rel="stylesheet" href="style.css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#006400',    // 深绿色
+                        secondary: '#00b359',  // 亮绿色
+                        accent: '#66ff99',     // 浅绿色
+                        light: '#e6ffe6',      // 极浅绿
+                        dark: '#004d00',       // 墨绿色
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+  @layer utilities {
+    .content-auto {
+      content-visibility: auto;
+    }
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,100,0,0.15);
+    }
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card-front, .flip-card-back {
+      backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* ✅ 展开详情控制样式 */
+    .group:focus-within .product-details {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>🛞马来西亚橡胶小百科🧤</h1>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="橡胶_历史1.html">关于橡胶</a>
+     <a href="橡胶_data.html">数据图表</a>
+    <a href="橡胶_小知识.html">橡胶小知识</a>
+    <a href="橡胶_推荐1.html">产品推荐</a>
+  </nav>
+</header>
+
+ <!-- 主内容区 -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 页面标题 -->
+       <section class="mb-16">
+  <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-primary mb-8 text-center">推荐橡胶产品类型</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+
+    <!-- 卡片 1 - SMR 20 -->
+    <div class="flip-card relative rounded-xl overflow-hidden shadow-lg card-hover group min-h-[420px]" tabindex="0" role="button" aria-expanded="false" aria-controls="detail1">
+      <div class="absolute inset-0 bg-gradient-to-br from-white to-light transform transition-transform duration-700 group-hover:scale-105"></div>
+      <div class="product-icon absolute top-4 left-4 text-4xl text-secondary z-10">🛞</div>
+      <div class="relative p-6 z-20 flex flex-col items-center justify-center h-full">
+        <h3 class="text-xl font-bold text-dark mb-2">SMR 20 标准胶</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">轮胎、鞋底、胶带等常见工业品</p>
+        <div class="flip-tip text-secondary text-sm transition-transform duration-300 group-hover:translate-y-1">点击展开详情 ⤵</div>
+        <div id="detail1" class="product-details absolute inset-0 bg-secondary/90 rounded-xl p-6 flex flex-col justify-center items-center transform translate-y-full opacity-0 transition-all duration-500 group.expanded:translate-y-0 group.expanded:opacity-100">
+          <div class="text-white text-sm text-left max-w-xs">
+            <h4 class="font-bold mb-2 text-center">特性与优势</h4>
+            <ul class="list-disc pl-5 mb-3">
+              <li>杂质含量≤0.05%，符合国际标准</li>
+              <li>门尼粘度(ML 1+4 100°C): 60-75</li>
+              <li>拉伸强度≥25MPa，断裂伸长率≥700%</li>
+              <li>优异的耐磨性能和回弹性</li>
+              <li>良好的加工性能，适合挤出和模压</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片 2 - SMR L -->
+    <div class="flip-card relative rounded-xl overflow-hidden shadow-lg card-hover group min-h-[420px]" tabindex="0" role="button" aria-expanded="false" aria-controls="detail2">
+      <div class="absolute inset-0 bg-gradient-to-br from-white to-light transform transition-transform duration-700 group-hover:scale-105"></div>
+      <div class="product-icon absolute top-4 left-4 text-4xl text-secondary z-10">🧤</div>
+      <div class="relative p-6 z-20 flex flex-col items-center justify-center h-full">
+        <h3 class="text-xl font-bold text-dark mb-2">SMR L 高纯度胶</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">手套、试管、食品包装类产品</p>
+        <div class="flip-tip text-secondary text-sm transition-transform duration-300 group-hover:translate-y-1">点击展开详情 ⤵</div>
+        <div id="detail2" class="product-details absolute inset-0 bg-secondary/90 rounded-xl p-6 flex flex-col justify-center items-center transform translate-y-full opacity-0 transition-all duration-500 group.expanded:translate-y-0 group.expanded:opacity-100">
+          <div class="text-white text-sm text-left max-w-xs">
+            <h4 class="font-bold mb-2 text-center">特性与优势</h4>
+            <ul class="list-disc pl-5 mb-3">
+              <li>超高纯度，杂质含量≤0.03%</li>
+              <li>低蛋白质含量，减少过敏风险</li>
+              <li>门尼粘度(ML 1+4 100°C): 55-70</li>
+              <li>透明度高，色泽均匀</li>
+              <li>极佳的柔韧性和抗撕裂性</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片 3 - SMR CV -->
+    <div class="flip-card relative rounded-xl overflow-hidden shadow-lg card-hover group min-h-[420px]" tabindex="0" role="button" aria-expanded="false" aria-controls="detail3">
+      <div class="absolute inset-0 bg-gradient-to-br from-white to-light transform transition-transform duration-700 group-hover:scale-105"></div>
+      <div class="product-icon absolute top-4 left-4 text-4xl text-secondary z-10">🚗</div>
+      <div class="relative p-6 z-20 flex flex-col items-center justify-center h-full">
+        <h3 class="text-xl font-bold text-dark mb-2">SMR CV 恒黏度胶</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">汽车密封件、工业组件</p>
+        <div class="flip-tip text-secondary text-sm transition-transform duration-300 group-hover:translate-y-1">点击展开详情 ⤵</div>
+        <div id="detail3" class="product-details absolute inset-0 bg-secondary/90 rounded-xl p-6 flex flex-col justify-center items-center transform translate-y-full opacity-0 transition-all duration-500 group.expanded:translate-y-0 group.expanded:opacity-100">
+          <div class="text-white text-sm text-left max-w-xs">
+            <h4 class="font-bold mb-2 text-center">特性与优势</h4>
+            <ul class="list-disc pl-5 mb-3">
+              <li>粘度稳定性高，波动范围≤5门尼单位</li>
+              <li>杂质含量≤0.04%，硫化性能均一</li>
+              <li>门尼粘度(ML 1+4 100°C): 65-80(可定制)</li>
+              <li>优异的耐老化和抗疲劳性能</li>
+              <li>加工过程中尺寸精度控制精确</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片 4 - SMR GP -->
+    <div class="flip-card relative rounded-xl overflow-hidden shadow-lg card-hover group min-h-[420px]" tabindex="0" role="button" aria-expanded="false" aria-controls="detail4">
+      <div class="absolute inset-0 bg-gradient-to-br from-white to-light transform transition-transform duration-700 group-hover:scale-105"></div>
+      <div class="product-icon absolute top-4 left-4 text-4xl text-secondary z-10">📦</div>
+      <div class="relative p-6 z-20 flex flex-col items-center justify-center h-full">
+        <h3 class="text-xl font-bold text-dark mb-2">SMR GP 通用胶</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">包装制品、日常塑料用品</p>
+        <div class="flip-tip text-secondary text-sm transition-transform duration-300 group-hover:translate-y-1">点击展开详情 ⤵</div>
+        <div id="detail4" class="product-details absolute inset-0 bg-secondary/90 rounded-xl p-6 flex flex-col justify-center items-center transform translate-y-full opacity-0 transition-all duration-500 group.expanded:translate-y-0 group.expanded:opacity-100">
+          <div class="text-white text-sm text-left max-w-xs">
+            <h4 class="font-bold mb-2 text-center">特性与优势</h4>
+            <ul class="list-disc pl-5 mb-3">
+              <li>良好的综合性能，性价比高</li>
+              <li>杂质含量≤0.08%，满足一般工业需求</li>
+              <li>门尼粘度(ML 1+4 100°C): 55-75</li>
+              <li>易加工，混炼周期短</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片 5 - SMR 10 -->
+    <div class="flip-card relative rounded-xl overflow-hidden shadow-lg card-hover group min-h-[420px]" tabindex="0" role="button" aria-expanded="false" aria-controls="detail5">
+      <div class="absolute inset-0 bg-gradient-to-br from-white to-light transform transition-transform duration-700 group-hover:scale-105"></div>
+      <div class="product-icon absolute top-4 left-4 text-4xl text-secondary z-10">⚙️</div>
+      <div class="relative p-6 z-20 flex flex-col items-center justify-center h-full">
+        <h3 class="text-xl font-bold text-dark mb-2">SMR 10 中等级胶</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">输送带、减震器、机械零件</p>
+        <div class="flip-tip text-secondary text-sm transition-transform duration-300 group-hover:translate-y-1">点击展开详情 ⤵</div>
+        <div id="detail5" class="product-details absolute inset-0 bg-secondary/90 rounded-xl p-6 flex flex-col justify-center items-center transform translate-y-full opacity-0 transition-all duration-500 group.expanded:translate-y-0 group.expanded:opacity-100">
+          <div class="text-white text-sm text-left max-w-xs">
+            <h4 class="font-bold mb-2 text-center">特性与优势</h4>
+            <ul class="list-disc pl-5 mb-3">
+              <li>中等纯度，杂质含量≤0.10%</li>
+              <li>门尼粘度(ML 1+4 100°C): 60-80</li>
+              <li>良好的耐磨性和抗撕裂性</li>
+              <li>适合高温硫化工艺</li>
+              <li>性价比优于 SMR 20</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+        <!-- 马来西亚知名橡胶公司推荐 -->
+        <section class="mb-16">
+            <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-primary mb-8 text-center">马来西亚知名橡胶公司推荐</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 公司卡片 1 -->
+                <div class="company-card bg-white rounded-xl shadow-md p-6 card-hover">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sime_Darby_Berhad_Logo.jpg/500px-Sime_Darby_Berhad_Logo.jpg" alt="Sime Darby Logo" class="company-logo h-12 mx-auto mb-4 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-xl font-bold text-dark mb-3 text-center">Sime Darby</h3>
+                    <p class="text-gray-600 text-sm mb-5 text-center">马来西亚大型橡胶和棕榈油集团，橡胶制品涵盖轮胎及工业橡胶。业务遍及全球，拥有先进的种植和加工技术。</p>
+                    <div class="flex justify-center">
+                        <a href="https://www.simedarby.com" target="_blank" rel="noopener" class="btn bg-secondary hover:bg-primary text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 inline-flex items-center">
+                            <i class="fa fa-external-link mr-2"></i> 访问官网
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 公司卡片 2 -->
+                <div class="company-card bg-white rounded-xl shadow-md p-6 card-hover">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/KOSSAN_Logo.png/500px-KOSSAN_Logo.png" alt="Kossan Rubber Logo" class="company-logo h-12 mx-auto mb-4 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-xl font-bold text-dark mb-3 text-center">Kossan Rubber Industries</h3>
+                    <p class="text-gray-600 text-sm mb-5 text-center">专注于橡胶手套制造，是全球领先的橡胶手套供应商。产品以高品质和创新技术著称，服务于医疗和工业领域。</p>
+                    <div class="flex justify-center">
+                        <a href="https://www.kossan.com.my" target="_blank" rel="noopener" class="btn bg-secondary hover:bg-primary text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 inline-flex items-center">
+                            <i class="fa fa-external-link mr-2"></i> 访问官网
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 公司卡片 3 -->
+                <div class="company-card bg-white rounded-xl shadow-md p-6 card-hover">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Top_Glove_logo.png/2880px-Top_Glove_logo.png" alt="Top Glove Logo" class="company-logo h-12 mx-auto mb-4 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-xl font-bold text-dark mb-3 text-center">Top Glove Corporation</h3>
+                    <p class="text-gray-600 text-sm mb-5 text-center">全球最大的橡胶手套制造商，产品广泛应用于医疗及工业领域。拥有先进的生产设施和严格的质量控制体系。</p>
+                    <div class="flex justify-center">
+                        <a href="https://www.topglove.com" target="_blank" rel="noopener" class="btn bg-secondary hover:bg-primary text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 inline-flex items-center">
+                            <i class="fa fa-external-link mr-2"></i> 访问官网
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+
+ <script>
+        // 点击卡片展开/收起详情
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // 阻止事件冒泡
+                e.stopPropagation();
+                
+                // 切换当前卡片的展开状态
+                card.classList.toggle('expanded');
+                const expanded = card.classList.contains('expanded');
+                card.setAttribute('aria-expanded', expanded);
+                
+                // 更新提示文本
+                const flipTip = card.querySelector('.flip-tip');
+                if (expanded) {
+                    flipTip.innerHTML = '点击收起详情 ⤴';
+                } else {
+                    flipTip.innerHTML = '点击展开详情 ⤵';
+                }
+                
+                // 关闭其他所有卡片
+                document.querySelectorAll('.flip-card').forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('expanded');
+                        otherCard.setAttribute('aria-expanded', 'false');
+                        const otherFlipTip = otherCard.querySelector('.flip-tip');
+                        otherFlipTip.innerHTML = '点击展开详情 ⤵';
+                    }
+                });
+            });
+            
+            // 支持键盘操作
+            card.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+        
+        // 点击空白处关闭所有卡片
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.flip-card').forEach(card => {
+                card.classList.remove('expanded');
+                card.setAttribute('aria-expanded', 'false');
+                const flipTip = card.querySelector('.flip-tip');
+                flipTip.innerHTML = '点击展开详情 ⤵';
+            });
+        });
+        
+        // 防止点击卡片内容时关闭卡片
+        document.querySelectorAll('.product-details').forEach(detail => {
+            detail.addEventListener('click', e => {
+                e.stopPropagation();
+            });
+        });
+        document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const expanded = card.classList.contains('expanded');
+      // 关闭所有卡片
+      document.querySelectorAll('.flip-card.expanded').forEach(c => c.classList.remove('expanded'));
+      // 如果点击的是未展开的，展开它
+      if (!expanded) card.classList.add('expanded');
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const expanded = card.classList.contains('expanded');
+        document.querySelectorAll('.flip-card.expanded').forEach(c => c.classList.remove('expanded'));
+        if (!expanded) card.classList.add('expanded');
+      }
+    });
+  });
+
+</script>
+   
+
+ <footer style="text-align:center; padding: 1em; background:#222; color:#ccc; margin-top: 40px;">
+  &copy; 马来西亚橡胶科普 ｜ ©️janice 2025年6月制作
+</footer>
+
+</body>
+</html>

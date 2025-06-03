@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>橡胶历史 - 马来西亚橡胶科普网</title>
+<link rel="stylesheet" href="style.css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#006400',
+                        secondary: '#00b359',
+                        accent: '#66ff99',
+                        dark: '#004d00',
+                        light: '#e6ffe6',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .timeline-details {
+                @apply mb-5 bg-light border border-secondary/20 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md;
+            }
+            .timeline-summary {
+                @apply cursor-pointer font-bold text-lg text-primary p-4 outline-none transition-all duration-300 flex justify-between items-center;
+            }
+            .timeline-summary::marker {
+                @apply hidden;
+            }
+            .timeline-summary::-webkit-details-marker {
+                @apply hidden;
+            }
+            .timeline-summary-icon {
+                @apply text-secondary transition-transform duration-300;
+            }
+            details[open] .timeline-summary {
+                @apply bg-secondary/10;
+            }
+            details[open] .timeline-summary-icon {
+                @apply rotate-180;
+            }
+            .timeline-event {
+                @apply p-4 border-t border-secondary/10 hover:bg-white/50 transition-colors duration-200;
+            }
+            .timeline-year {
+                @apply font-bold text-dark text-lg mb-1 inline-block;
+            }
+            .timeline-content {
+                @apply text-gray-700 pl-4 border-l-2 border-secondary/30;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <h1>🛞马来西亚橡胶小百科🧤</h1>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="橡胶_历史.html">关于橡胶</a>
+    <a href="橡胶_data.html">数据图表</a>
+    <a href="橡胶_小知识.html">橡胶小知识</a>
+    <a href="橡胶_推荐1.html">产品推荐</a>
+  </nav>
+</header>
+
+ <main class="container mx-auto px-4 py-8">
+        <!-- 页面标题 -->
+        <section class="mb-12 text-center">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-primary mb-4">马来西亚橡胶历史时间轴</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">从19世纪的引种到如今的全球领先地位，马来西亚橡胶产业经历了百年发展历程。</p>
+        </section>
+
+        <!-- 交互式时间线 -->
+        <section class="max-w-4xl mx-auto">
+            <!-- 19世纪 -->
+            <details class="timeline-details" open>
+                <summary class="timeline-summary">
+                    <span><i class="fa fa-calendar-o mr-2"></i><strong>19世纪：橡胶走向全球</strong></span>
+                    <span class="timeline-summary-icon"><i class="fa fa-chevron-down"></i></span>
+                </summary>
+                <div class="timeline-events">
+                    <div class="timeline-event">
+                        <div class="timeline-year">1839年</div>
+                        <div class="timeline-content">
+                            <p>美国人查尔斯·固特异发明橡胶硫化法，解决橡胶易熔化和粘手的问题，为工业应用打开大门。这一发明标志着橡胶工业的开端，使橡胶能够用于制造更耐用的产品。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1876年</div>
+                        <div class="timeline-content">
+                            <p>英国人威克汉姆从南美运回7万颗橡胶种子，经英国皇家植物园培育后，成功传入斯里兰卡与马来亚。这一事件为橡胶在东南亚的大规模种植铺平了道路。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1877年</div>
+                        <div class="timeline-content">
+                            <p>首批橡胶树苗从新加坡植物园引入马来亚，种植于吉隆坡附近的植物园。这是橡胶树在马来亚的首次成功引种。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1896年</div>
+                        <div class="timeline-content">
+                            <p>马来亚第一个商业性橡胶种植园"淡边种植园"在吉隆坡附近建立，面积约100英亩。这标志着橡胶作为经济作物在马来亚的开始。</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 20世纪上半叶 -->
+            <details class="timeline-details">
+                <summary class="timeline-summary">
+                    <span><i class="fa fa-calendar-o mr-2"></i><strong>20世纪上半叶：黄金时代与战争挑战</strong></span>
+                    <span class="timeline-summary-icon"><i class="fa fa-chevron-down"></i></span>
+                </summary>
+                <div class="timeline-events">
+                    <div class="timeline-event">
+                        <div class="timeline-year">1900-1930年代</div>
+                        <div class="timeline-content">
+                            <p>随着汽车工业的发展，天然橡胶需求呈现爆炸式增长。马来亚凭借优越的气候条件和先进的种植技术，迅速成为全球第一大橡胶出口国，支撑了英国殖民地的经济建设。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1905年</div>
+                        <div class="timeline-content">
+                            <p>亨利·尼古拉斯·里德利博士发明"斜切法"割胶技术，将橡胶产量提高了数倍。这一技术革新推动马来西亚橡胶产业快速发展，成为全球主要橡胶生产地。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1910年代</div>
+                        <div class="timeline-content">
+                            <p>马来亚（当时的英属马来亚）成为世界最大的天然橡胶生产国，占全球供应量的一半以上。橡胶产业的繁荣带动了马来西亚的经济发展，吸引了大量移民前来工作。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1922年</div>
+                        <div class="timeline-content">
+                            <p>国际橡胶协定(Stevenson Plan)实施，限制马来西亚和其他产胶国的橡胶出口量，以稳定价格。这一协定对马来西亚橡胶产业产生了重大影响，直到1928年被废除。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1942-1945年</div>
+                        <div class="timeline-content">
+                            <p>二战期间，日军控制东南亚，导致美欧天然橡胶供应中断。这促使美国大力发展合成橡胶技术，同时也导致东南亚橡胶市场短暂衰退。</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 20世纪下半叶 -->
+            <details class="timeline-details">
+                <summary class="timeline-summary">
+                    <span><i class="fa fa-calendar-o mr-2"></i><strong>20世纪下半叶：独立与产业转型</strong></span>
+                    <span class="timeline-summary-icon"><i class="fa fa-chevron-down"></i></span>
+                </summary>
+                <div class="timeline-events">
+                    <div class="timeline-event">
+                        <div class="timeline-year">1950年代</div>
+                        <div class="timeline-content">
+                            <p>马来西亚独立后，政府采取措施促进橡胶产业发展，包括建立研究机构和推广新技术。马来西亚橡胶局(MRB)成立，致力于提高橡胶产量和质量，推动产业多元化。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1960年代</div>
+                        <div class="timeline-content">
+                            <p>马来西亚推出"橡胶小园主发展计划"，帮助小型种植园主提高生产效率和收入。这一计划显著改善了农村地区的经济状况。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1970年代</div>
+                        <div class="timeline-content">
+                            <p>合成橡胶的发展对天然橡胶市场造成冲击，马来西亚开始推动橡胶深加工产业，提高产品附加值。从单纯的橡胶原料出口转向生产轮胎、手套等橡胶制品，增强产业竞争力。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1980年代</div>
+                        <div class="timeline-content">
+                            <p>马来西亚橡胶研究院(MPIB)成立，专注于橡胶种植技术研发和品种改良。这一时期，高产抗病的橡胶新品种得到广泛推广。</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 21世纪 -->
+            <details class="timeline-details">
+                <summary class="timeline-summary">
+                    <span><i class="fa fa-calendar-o mr-2"></i><strong>21世纪：可持续发展与技术创新</strong></span>
+                    <span class="timeline-summary-icon"><i class="fa fa-chevron-down"></i></span>
+                </summary>
+                <div class="timeline-events">
+                    <div class="timeline-event">
+                        <div class="timeline-year">2000年代</div>
+                        <div class="timeline-content">
+                            <p>全球对可持续发展的关注增加，马来西亚开始注重橡胶产业的环境和社会责任。推行可持续种植 practices、劳工权益保障和环境保护措施，提升产业形象。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">2010年代</div>
+                        <div class="timeline-content">
+                            <p>马来西亚橡胶产业面临劳动力短缺和生产成本上升的挑战，开始探索自动化和智能化生产技术。无人机监测、物联网和大数据分析等技术逐渐应用于橡胶种植和管理。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">2020年代</div>
+                        <div class="timeline-content">
+                            <p>马来西亚橡胶产业拥抱数字化和自动化，引入无人机监测、物联网和人工智能技术，提高生产效率。同时，加强与国际组织合作，推动全球橡胶产业的可持续发展。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">2025年</div>
+                        <div class="timeline-content">
+                            <p>马来西亚推出"橡胶4.0"计划，全面整合人工智能、区块链和自动化技术，打造智慧橡胶产业。该计划旨在提高生产力、可持续性和全球竞争力。</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- 快速事实卡片 -->
+        <section class="mt-16">
+            <h3 class="text-2xl font-bold text-primary mb-8 text-center">橡胶产业快速事实</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-semibold text-dark">全球地位</h4>
+                        <i class="fa fa-globe text-2xl text-secondary"></i>
+                    </div>
+                    <p class="text-gray-700">马来西亚是全球第三大天然橡胶生产国，年产量约为80万吨，占全球供应量的约7%。</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-semibold text-dark">经济贡献</h4>
+                        <i class="fa fa-money text-2xl text-secondary"></i>
+                    </div>
+                    <p class="text-gray-700">橡胶产业每年为马来西亚创造超过30亿美元的出口收入，直接雇佣超过50万人。</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-semibold text-dark">种植面积</h4>
+                        <i class="fa fa-tree text-2xl text-secondary"></i>
+                    </div>
+                    <p class="text-gray-700">马来西亚橡胶种植面积约为1.2百万公顷，主要分布在半岛马来西亚的西部和南部地区。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // 平滑滚动到详情内容
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                if (this.open) {
+                    setTimeout(() => {
+                        this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                }
+            });
+        });
+    </script>
+
+     <footer style="text-align:center; padding: 1em; background:#222; color:#ccc; margin-top: 40px;">
+  &copy; 马来西亚橡胶科普 ｜ ©️janice 2025年6月制作
+</footer>
+
+</body>
+</html>

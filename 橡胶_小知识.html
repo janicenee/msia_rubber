@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>橡胶历史 - 马来西亚橡胶科普网</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>🛞马来西亚橡胶小百科🧤</h1>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="橡胶_历史1.html">关于橡胶</a>
+    <a href="橡胶_data.html">数据图表</a>
+    <a href="橡胶_小知识.html">橡胶小知识</a>
+    <a href="橡胶_推荐1.html">产品推荐</a>
+  </nav>
+</header>
+
+<main>
+  <h2>橡胶小知识</h2>
+  <div class="facts-container">
+
+    <div class="fact-card" tabindex="0">
+      <div class="card-front">
+        <h3>橡胶的来源</h3>
+        <p>天然橡胶主要来自橡胶树的乳胶，是一种高分子聚合物。</p>
+      </div>
+      <div class="card-back">
+        <p>天然橡胶是由橡胶树乳胶经过加工提炼而成，属于高分子天然聚合物，具有优良的弹性和耐磨性。</p>
+      </div>
+    </div>
+
+    <div class="fact-card" tabindex="0">
+      <div class="card-front">
+        <h3>橡胶的用途</h3>
+        <p>橡胶广泛用于制造轮胎、密封件、防水材料和手套等。</p>
+      </div>
+      <div class="card-back">
+        <p>橡胶被广泛应用于轮胎、鞋底、密封圈、防水材料和手套等众多领域，因其弹性和耐久性深受青睐。</p>
+      </div>
+    </div>
+
+    <div class="fact-card" tabindex="0">
+      <div class="card-front">
+        <h3>橡胶的特性</h3>
+        <p>具有良好的弹性、耐磨性和绝缘性能。</p>
+      </div>
+      <div class="card-back">
+        <p>橡胶的弹性让它在汽车轮胎、鞋底等多种产品中发挥关键作用，同时具备一定的绝缘性能。</p>
+      </div>
+    </div>
+
+    <div class="fact-card" tabindex="0">
+      <div class="card-front">
+        <h3>合成橡胶简介</h3>
+        <p>合成橡胶通过化学方法制成，适应各种工业需求。</p>
+      </div>
+      <div class="card-back">
+        <p>合成橡胶种类繁多，包括丁苯橡胶、氯丁橡胶等，广泛应用于工业和生活中。</p>
+      </div>
+    </div>
+
+    <div class="fact-card" tabindex="0">
+      <div class="card-front">
+        <h3>橡胶回收利用</h3>
+        <p>废旧橡胶可以经过处理用于制造再生橡胶产品，环保节能。</p>
+      </div>
+      <div class="card-back">
+        <p>橡胶回收减少资源浪费，经过粉碎、改性后可用来制作地垫、运动场地面等。</p>
+      </div>
+    </div>
+
+    <div class="fact-card" tabindex="0">
+      <div class="card-front">
+        <h3>橡胶的弹性原理</h3>
+        <p>橡胶的弹性来源于分子链的可伸缩性和卷曲结构。</p>
+      </div>
+      <div class="card-back">
+        <p>橡胶分子链在拉伸时伸展开，释放时卷曲回原状，这种特性赋予橡胶卓越的弹性。</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<script>
+  document.querySelectorAll('.fact-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+    // 支持键盘Enter键翻转，方便无障碍
+    card.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.classList.toggle('flipped');
+      }
+    });
+  });
+</script>
+
+
+
+ <footer style="text-align:center; padding: 1em; background:#222; color:#ccc; margin-top: 40px;">
+  &copy; 马来西亚橡胶科普 ｜ ©️janice 2025年6月制作
+</footer>
+
+</body>
+</html>
